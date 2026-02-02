@@ -1,14 +1,78 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+  <article class="profile-card-example">
 
-  <p>{{ person.name }}</p>
+    <header class="profile-card-example-header">
 
-  <footer></footer>
-</article>
+      <h1>{{ person.name }}</h1>
+
+      <button class="profile-card-example-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <title>Wijzig layout</title>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
+          <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
+          <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
+          <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
+          <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
+          <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
+          <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
+        </svg>
+      </button>
+
+    </header>
+
+    <img src="/ikzelf.jpg" alt="" width="800" height="800" class="profile-card-img">
+
+    <h2 class="profile-card-title">Mijn Info</h2>
+
+    <dl class="profile-card-info">
+
+      <div class="info-section">
+        <dd>👶</dd>
+        <dt>20 jaar</dt>
+      </div>
+
+      <div class="info-section">
+        <dd>📍</dd>
+        <dt>Amsterdam</dt>
+      </div>
+
+      <div class="info-section">
+        <dd>🚶</dd>
+        <dt>Wandelen</dt>
+      </div>
+
+      <div class="info-section">
+        <dd>🎬</dd>
+        <dt>Netflix</dt>
+      </div>
+
+      <div class="info-section">
+        <dd>🎓</dd>
+        <dt>HAVO</dt>
+      </div>
+
+      <div class="info-section">
+        <dd>✈️</dd>
+        <dt>Japan</dt>
+      </div>
+
+    </dl>
+
+    <button class="previous">◀</button>
+    <button class="next">▶</button>
+
+    <p>Just because it's taking time doesn't mean it's not happening.</p>
+
+  </article>
+
+  <script src="scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}
