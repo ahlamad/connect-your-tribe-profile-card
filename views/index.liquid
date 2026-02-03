@@ -2,75 +2,111 @@
 
   <article class="profile-card-example">
 
-    <header class="profile-card-example-header">
+    <h1>{{ person.name | upcase }}</h1>
+    <h2>{{ person.nickname }}</h2>
 
-      <h1>{{ person.name }}</h1>
+    <ul>
+      <li>
+        <button popovertarget="popover">
+          <?xml version="1.0" encoding="utf-8"?><svg fill="#000000" width="25px" height="25px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M10 4L10 20L2.9941406 20L3.1464844 46L17.046875 46L19.046875 46L33 46L47 46L47 8L31 8L31 9L31 28L25.996094 28L25.996094 4.0078125L10 4 z M 12 6L23.996094 6.0078125L23.996094 28L19.013672 28L18.998047 20L18 20L12 20L12 6 z M 15 8L15 10L17 10L17 8L15 8 z M 19.039062 8L19.039062 10L21 10L21 8L19.039062 8 z M 33 10L45 10L45 44L39.960938 44L39.960938 40L38 40L38 44L33 44L33 28L33 10 z M 15 12L15 14L17 14L17 12L15 12 z M 19 12L19 14L21 14L21 12L19 12 z M 36 12.003906L36 14L38 14L38 12.003906L36 12.003906 z M 40.019531 12.007812L40.019531 14.021484L41.980469 14.021484L41.980469 12.007812L40.019531 12.007812 z M 36 16.015625L36 18L38 18L38 16.015625L36 16.015625 z M 40.019531 16.015625L40.019531 18L41.980469 18L41.980469 16.015625L40.019531 16.015625 z M 36 20L36 22L38 22L38 20L36 20 z M 40 20L40 22L41.980469 22L41.980469 20L40 20 z M 5.0058594 22L17.001953 22L17.013672 28L16.998047 28L17.041016 44L11.980469 44L11.980469 40L10.019531 40L10.019531 44L5.1347656 44L5.0058594 22 z M 8 24L8 26.015625L10.039062 26.015625L10.039062 24L8 24 z M 12.039062 24L12.039062 26.015625L14 26.015625L14 24L12.039062 24 z M 36 24.007812L36 25.998047L38 25.998047L38 24.007812L36 24.007812 z M 40 24.007812L40 25.998047L41.980469 25.998047L41.980469 24.007812L40 24.007812 z M 8 27.984375L8 30L10.039062 30L10.039062 27.984375L8 27.984375 z M 12.039062 27.984375L12.039062 30L14 30L14 27.984375L12.039062 27.984375 z M 36 27.992188L36 30.007812L38 30.007812L38 27.992188L36 27.992188 z M 40.019531 27.992188L40.019531 30.007812L41.980469 30.007812L41.980469 27.992188L40.019531 27.992188 z M 19.017578 30L31 30L31 44L26 44L26 40L24 40L24 44L19.042969 44L19.017578 30 z M 8 32L8 34.015625L10.039062 34.015625L10.039062 32L8 32 z M 12.039062 32L12.039062 34.015625L14 34.015625L14 32L12.039062 32 z M 22 32L22 34.015625L24 34.015625L24 32L22 32 z M 26 32L26 34.015625L28 34.015625L28 32L26 32 z M 36 32L36 34.015625L38 34.015625L38 32L36 32 z M 40.019531 32L40.019531 34.015625L41.980469 34.015625L41.980469 32L40.019531 32 z M 22 35.984375L22 38L24 38L24 35.984375L22 35.984375 z M 26 35.984375L26 38L28 38L28 35.984375L26 35.984375 z M 36 35.984375L36 38L38 38L38 35.984375L36 35.984375 z M 40.019531 35.984375L40.019531 38L41.980469 38L41.980469 35.984375L40.019531 35.984375 z"/></svg>
+        </button>
 
-      <button class="profile-card-example-button">
-        <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-          stroke-linecap="round" stroke-linejoin="round">
-          <title>Wijzig layout</title>
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-          <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-          <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-          <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-        </svg>
-        <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-          <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-          <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-          <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-        </svg>
-      </button>
+        <dialog popover id="popover">
+          <figure>
+            <img src="/amsterdamgracht.jpg">
+            <img src="/matcha.jpg">
+            <img src="/koekemannetje.jpg">
+            <figcaption>Amsterdam</figcaption>
+            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+          </figure>
+        </dialog>
+      </li>
 
-    </header>
+      <li>
+        <button popovertarget="popover">
+          <?xml version="1.0" encoding="utf-8"?><svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 22V16.9612C14 16.3537 13.7238 15.7791 13.2494 15.3995L11.5 14M11.5 14L13 7.5M11.5 14L10 13M13 7.5L11 7M13 7.5L15.0426 10.7681C15.3345 11.2352 15.8062 11.5612 16.3463 11.6693L18 12M10 13L11 7M10 13L8 22M11 7L8.10557 8.44721C7.428 8.786 7 9.47852 7 10.2361V12M14.5 3.5C14.5 4.05228 14.0523 4.5 13.5 4.5C12.9477 4.5 12.5 4.05228 12.5 3.5C12.5 2.94772 12.9477 2.5 13.5 2.5C14.0523 2.5 14.5 2.94772 14.5 3.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
 
-    <img src="/ikzelf.jpg" alt="" width="800" height="800" class="profile-card-img">
+        <dialog popover id="popover">
+          <figure>
+            <img src="/amsterdamgracht.jpg">
+            <img src="/matcha.jpg">
+            <img src="/koekemannetje.jpg">
+            <figcaption>Amsterdam</figcaption>
+            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+          </figure>
+        </dialog>
+      </li>
+      
+      <li>
+        <button popovertarget="popover">
+          <?xml version="1.0" encoding="utf-8"?><svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
 
-    <h2 class="profile-card-title">Mijn Info</h2>
+        <dialog popover id="popover">
+          <figure>
+            <img src="/amsterdamgracht.jpg">
+            <img src="/matcha.jpg">
+            <img src="/koekemannetje.jpg">
+            <figcaption>Amsterdam</figcaption>
+            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+          </figure>
+        </dialog>
+      </li>
 
-    <dl class="profile-card-info">
+      <li>
+        <button popovertarget="popover">
+          <?xml version="1.0" encoding="iso-8859-1"?><svg height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><path style="fill:#ED1F34;" d="M503.742,385.927V126.073c0-19.459-15.775-35.234-35.234-35.234H43.492c-19.459,0-35.234,15.775-35.234,35.234v259.854c0,19.459,15.775,35.234,35.234,35.234h425.015C487.967,421.161,503.742,405.386,503.742,385.927z"/>
+          <path style="fill:#134923;" d="M298.931,330.323c-1.703,0-3.407-0.526-4.854-1.577L256,301.08l-38.077,27.665
+	          c-2.894,2.103-6.815,2.103-9.707,0c-2.895-2.103-4.106-5.83-3-9.233l14.544-44.762l-34.609-25.145c-5-3.632-6.871-4.992-6.871-9.199
+	          c0-4.561,3.697-8.258,8.258-8.258h47.064l14.545-44.763c1.105-3.402,4.277-5.706,7.854-5.706s6.748,2.303,7.854,5.706l14.545,44.763
+	          h47.067c3.577,0,6.749,2.303,7.854,5.707c1.105,3.402-0.106,7.129-3,9.233l-38.077,27.665l14.544,44.762
+	          c1.105,3.402-0.106,7.131-3,9.234C302.338,329.796,300.634,330.323,298.931,330.323z M270.049,290.872l13.174,9.572l-5.032-15.487
+	          L270.049,290.872z M233.808,284.957l-5.032,15.487l13.174-9.572L233.808,284.957z M239.174,268.441l16.824,12.224l16.826-12.224
+	          l-6.427-19.779H245.6L239.174,268.441z M283.764,248.662l3.111,9.572l13.173-9.572H283.764z M211.951,248.662
+	          c4.03,2.928,8.476,6.158,13.173,9.571l3.109-9.571H211.951z M250.967,232.146h10.065L256,216.66L250.967,232.146z"/>
+          <path style="fill:#111A21;" d="M468.324,429.419H43.675C19.593,429.419,0,409.827,0,385.743V126.256
+	          c0-24.083,19.593-43.675,43.675-43.675h424.648c24.084,0,43.676,19.593,43.676,43.675v259.487
+	          C512,409.827,492.407,429.419,468.324,429.419z M43.675,99.097c-14.976,0-27.159,12.183-27.159,27.159v259.487
+	          c0,14.977,12.183,27.16,27.159,27.16h424.648c14.977,0,27.16-12.183,27.16-27.16V126.256c0-14.976-12.183-27.159-27.16-27.159
+	          H43.675z"/></svg>
+        </button>
 
-      <div class="info-section">
-        <dd>👶</dd>
-        <dt>20 jaar</dt>
-      </div>
+        <dialog popover id="popover">
+          <figure>
+            <img src="/amsterdamgracht.jpg">
+            <img src="/matcha.jpg">
+            <img src="/koekemannetje.jpg">
+            <figcaption>Amsterdam</figcaption>
+            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+          </figure>
+        </dialog>
+      </li>
 
-      <div class="info-section">
-        <dd>📍</dd>
-        <dt>Amsterdam</dt>
-      </div>
+      <li>
+        <button popovertarget="popover">
+          <?xml version="1.0" encoding="iso-8859-1"?><svg fill="#000000" height="25px" width="25px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 197.442 197.442" xml:space="preserve"><path d="M186.696,83.902H40.775l136.473-49.707c1.246-0.454,2.261-1.384,2.821-2.586c0.56-1.202,0.62-2.577,0.166-3.823
+	          l-8.923-24.497c-0.945-2.596-3.815-3.928-6.409-2.987L9.035,57.074c-1.246,0.454-2.26,1.384-2.821,2.586
+	          c-0.56,1.202-0.62,2.577-0.166,3.823l8.922,24.496c0.159,0.436,0.381,0.828,0.638,1.188v103.275c0,2.762,2.239,5,5,5h166.088
+	          c2.762,0,5-2.238,5-5v-77.469V88.902C191.696,86.14,189.458,83.902,186.696,83.902z M166.123,18.262l3.005,8.248l-4.662,1.698
+	          L166.123,18.262z M128.872,24.068l19.34-7.044l-3.034,18.209l-19.34,7.044L128.872,24.068z M90.245,38.137l19.339-7.044
+	          l-3.034,18.209l-19.339,7.044L90.245,38.137z M51.617,52.207l19.339-7.044l-3.034,18.208l-19.338,7.044L51.617,52.207z
+	          M32.328,59.233l-3.034,18.208l-6.638,2.418l-5.5-15.1L32.328,59.233z M32.876,109.973h-7.065V93.902h16.148L32.876,109.973z
+	          M73.986,109.973H53.405l9.083-16.071h20.582L73.986,109.973z M115.097,109.973H94.515l9.082-16.071h20.583L115.097,109.973z
+	          M156.208,109.973h-20.583l9.083-16.071h20.583L156.208,109.973z M181.696,109.973h-4.961l4.961-8.778V109.973z"/></svg>
+        </button>
 
-      <div class="info-section">
-        <dd>🚶</dd>
-        <dt>Wandelen</dt>
-      </div>
-
-      <div class="info-section">
-        <dd>🎬</dd>
-        <dt>Netflix</dt>
-      </div>
-
-      <div class="info-section">
-        <dd>🎓</dd>
-        <dt>HAVO</dt>
-      </div>
-
-      <div class="info-section">
-        <dd>✈️</dd>
-        <dt>Japan</dt>
-      </div>
-
-    </dl>
-
-    <button class="previous">◀</button>
-    <button class="next">▶</button>
-
-    <p>Just because it's taking time doesn't mean it's not happening.</p>
-
+        <dialog popover id="popover">
+          <figure>
+            <img src="/amsterdamgracht.jpg">
+            <img src="/matcha.jpg">
+            <img src="/koekemannetje.jpg">
+            <figcaption>Amsterdam</figcaption>
+            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+          </figure>
+        </dialog>
+      </li>
+    </ul>
   </article>
 
   <script src="scripts/script.js"></script>
