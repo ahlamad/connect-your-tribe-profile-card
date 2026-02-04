@@ -1,9 +1,10 @@
 {% render 'partials/head.liquid' %}
 
   <article class="profile-card-example">
-
+<details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
     <h1>{{ person.name | upcase }}</h1>
     <h2>{{ person.nickname | upcase}}</h2>
+    <p>{{ person.birthdate }}</p>
 
     <ul>
       <li>
@@ -108,6 +109,8 @@
       </li>
     </ul>
   </article>
+
+  
 
   <script src="scripts/script.js"></script>
 
