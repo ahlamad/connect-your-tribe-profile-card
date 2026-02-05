@@ -1,19 +1,19 @@
 * {
   box-sizing: border-box;
+  font-family:monospace;
+  font-style: italic;
 }
 
 html:has(.profile-card-example) {
-  height: 100vh;
+  height: 100%;
 }
 
 body:has(.profile-card-example) {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: open sans;
+  height: 100%;
   color: #E0E0E0;
-  overflow-x: hidden;
   background: #F8E1E1;
 }
 
@@ -30,7 +30,16 @@ article.profile-card-example {
   height: 80%;
   border-radius: 1rem;
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1);
-  transition: all 0.5s ease;
+}
+
+.intro {
+  background-color: #800000;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1.3em;
+  font-size: 1.1em;
+  line-height: 1.1em;
 }
 
 figure {

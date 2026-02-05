@@ -4,9 +4,8 @@
 
   <article class="profile-card-example">
     <h1>{{ person.name | upcase }}</h1>
-    <h2>{{ person.nickname | upcase}}</h2>
-    <p>{{ person.birthdate }}</p>
-
+    <h2>{{ person.nickname | upcase }}</h2>
+    <p>{{ person.birthdate | date:" %a | %d%q of %B | '%y" }}</p>
 
     <ul>
       <li>
@@ -49,10 +48,12 @@
         <dialog popover id="popover-3">
           <figure>
             {{ person.custom.h3_3 }}
-            <img src="/amsterdamgracht.jpg" alt="Grachten in Amsterdam">
+            <img src="/code.jpg" alt="Laptop met code">
             <img src="/matcha.jpg" alt="Twee bekers matcha thee">
             <img src="/koekemannetje.jpg" alt="Koektrommel met koekjes">
-            <p>I was born and raised in Amsterdam and I love to do things in my city.</p>
+              <p>I have experience working with HTML, CSS, and JavaScript, with a strong focus on creating clean and Mobile-First websites.</p>
+              <p>Below you can find a selection of projects I developed during my time at school.</p>
+                <a href="https://ahlamad.github.io/look-and-feel-corporate-identity/settings.html">SnappThis Notifications</a>
           </figure>
         </dialog>
       </li>
@@ -97,6 +98,10 @@
         </dialog>
       </li>
     </ul>
+
+    <article class="intro">
+      {{ person.bio }}
+    </article>
   </article>
 
   <script src="scripts/script.js"></script>
