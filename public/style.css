@@ -64,6 +64,14 @@ article.profile-card {
     gap: .6em;
   }
 
+  button {
+    border-radius: 30%;
+
+    &:hover {
+      background-color: #a91717;
+    }
+  }
+
   .intro {
     background-color: #800000;
     display: flex;
