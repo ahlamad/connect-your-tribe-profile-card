@@ -57,7 +57,11 @@ article.profile-card {
 
   ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-top: 1em;
+    margin-right: 4.5em;
+    gap: .6em;
   }
 
   .intro {
@@ -71,12 +75,11 @@ article.profile-card {
     border-radius: 0 0 1rem 1rem;
     background: linear-gradient(
       to top,
-      #444444,
-      #5d3c3c
+      #7d6d6d,
+      #292929
     );
   }
 }
-
 
 figure {
   img {
