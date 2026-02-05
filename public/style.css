@@ -49,3 +49,11 @@ figure {
     width: 100px;
   }
 }
+
+details {
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#333;
+  z-index:1;
+}
