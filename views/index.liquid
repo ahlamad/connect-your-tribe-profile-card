@@ -2,10 +2,12 @@
 
 <details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
 
-  <article class="profile-card-example">
-    <h1>{{ person.name | upcase }}</h1>
-    <h2>{{ person.nickname | upcase }}</h2>
-    <p>{{ person.birthdate | date:" %a | %d%q of %B | '%y" }}</p>
+  <article class="profile-card">
+    <header class="title">
+      <h1>{{ person.name | upcase }}</h1>
+      <h2>{{ person.nickname | upcase }}</h2>
+      <p>{{ person.birthdate | date:" %a | %d%q of %B | '%y" }}</p>
+    </header>
 
     <ul>
       <li>

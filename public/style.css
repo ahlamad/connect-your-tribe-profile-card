@@ -1,14 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family:monospace;
+  font-family: monospace;
   font-style: italic;
+  list-style: none;
 }
 
-html:has(.profile-card-example) {
+html:has(.profile-card) {
   height: 100%;
 }
 
-body:has(.profile-card-example) {
+body:has(.profile-card) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,30 +18,65 @@ body:has(.profile-card-example) {
   background: #F8E1E1;
 }
 
-article.profile-card-example {
+article.profile-card {
   background-image: url("/ikzelf.jpg") ;
-  background-position: center 64%;
-  background-size: cover;
+  background-position: center top 200%;
+  background-size: 125%;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
   width: 50%;
   height: 80%;
   border-radius: 1rem;
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, .1);
+
+  .title {
+    font-size: 20px;
+    align-self: flex-end;
+    text-align: right;
+    padding-right: 1em;
+    margin: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      transparent
+    );
+
+    h1,
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .intro {
+    background-color: #800000;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 1.3em;
+    font-size: 16px;
+    line-height: 1em;
+    border-radius: 0 0 1rem 1rem;
+    background: linear-gradient(
+      to top,
+      #444444,
+      #5d3c3c
+    );
+  }
 }
 
-.intro {
-  background-color: #800000;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 1.3em;
-  font-size: 1.1em;
-  line-height: 1.1em;
-}
 
 figure {
   img {
@@ -54,6 +90,6 @@ details {
   position:fixed;
   top:0;
   width:100%;
-  background:#333;
+  background:#353535;
   z-index:1;
 }
